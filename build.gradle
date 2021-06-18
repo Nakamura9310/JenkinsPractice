@@ -32,6 +32,22 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-test {
-	useJUnitPlatform()
+// test {
+// 	useJUnitPlatform()
+// }
+
+
+task clean << {
+    println '[clean]10s sleep'
+    sleep(10000)
+}
+
+task test << {
+    println '[test] 2s sleep'
+    sleep(2000)
+}
+
+task build << {
+    println '[build] 5s sleep'
+    sleep(5000)
 }
